@@ -3,9 +3,8 @@ import streamlit as st
 import openai
 import langchain
 from index_functions import load_data
-from llama_index import VectorStoreIndex, ServiceContext, Document
-from llama_index.llms import OpenAI
-from llama_index import SimpleDirectoryReader
+from llama_index.core import VectorStoreIndex, ServiceContext, Document, SimpleDirectoryReader
+from llama_index.llms import openai as OpenAI
 
 # Main function to generate responses from OpenAI's API, not considering indexed data
 def generate_response(prompt, history, model_name, temperature):

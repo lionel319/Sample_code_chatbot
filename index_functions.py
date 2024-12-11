@@ -12,9 +12,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.tokenize import word_tokenize
 from stop_words import get_stop_words
-from llama_index.core import VectorStoreIndex, ServiceContext, Document
-from llama_index.llms import OpenAI
-from llama_index import SimpleDirectoryReader
+from llama_index.core import VectorStoreIndex, ServiceContext, Document, SimpleDirectoryReader
+from llama_index.llms import openai as OpenAI
 
 # Download necessary nltk resources
 nltk.download('punkt')
