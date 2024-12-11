@@ -24,7 +24,8 @@ def generate_response(prompt, history, model_name, temperature):
     ### Previous conversation history for context: {history}"
 
     # Making an API call to OpenAI to generate a chatbot response based on the constructed prompt
-    api_response = openai.ChatCompletion.create(
+    #api_response = openai.ChatCompletion.create(
+    api_response = openai.chat.completions.create(
         model=model_name,  # The specific OpenAI model to use for generating the response
         temperature=temperature,  # The 'creativity' setting for the response
         messages=[  # The list of message objects to provide conversation history context
